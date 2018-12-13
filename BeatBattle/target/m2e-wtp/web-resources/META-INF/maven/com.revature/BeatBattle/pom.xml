@@ -4,4 +4,8 @@
   <artifactId>BeatBattle</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  
+  <dependencies>
+  	
+  </dependencies>
 </project>
