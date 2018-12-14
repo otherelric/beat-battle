@@ -1,20 +1,40 @@
 package com.revature.pojo;
 
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="battle_table")
 public class Battle {
 	
+	@Id
+	@Column(name="battleid")
 	private int id;
-	private int userId;
-	private int playlistId;
+	
+	@OneToOne
+	@JoinColumn(name="userid")
+	private User user;
+	
+	@OneToMany
+	@JoinColumn(name="playlistid")
+	private Set<Playlist> playlist;
 
 	public Battle() {
-		// TODO Auto-generated constructor stub
+
 	}
 
-	public Battle(int id, int userId, int playlistId) {
+	public Battle(int id, User user, Set<Playlist> playlist) {
 		super();
 		this.id = id;
-		this.userId = userId;
-		this.playlistId = playlistId;
+		this.user = user;
+		this.playlist = playlist;
 	}
 
 	public int getId() {
@@ -25,25 +45,25 @@ public class Battle {
 		this.id = id;
 	}
 
-	public int getUserId() {
-		return userId;
+	public User getuser() {
+		return user;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setuser(User user) {
+		this.user = user;
 	}
 
-	public int getPlaylistId() {
-		return playlistId;
+	public Set<Playlist> getPlaylist() {
+		return playlist;
 	}
 
-	public void setPlaylistId(int playlistId) {
-		this.playlistId = playlistId;
+	public void setPlaylist(Set<Playlist> playlist) {
+		this.playlist = playlist;
 	}
 
 	@Override
 	public String toString() {
-		return "Battle [id=" + id + ", userId=" + userId + ", playlistId=" + playlistId + "]";
+		return "Battle [id=" + id + ", user=" + user + ", playlist=" + playlist + "]";
 	}
 
 }

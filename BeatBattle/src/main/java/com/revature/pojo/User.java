@@ -1,11 +1,28 @@
 package com.revature.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="user_table")
 public class User {
 
+	@Id
+	@Column(name="userid")
 	private int id;
+	
+	@Column(name="usern")
 	private String username;
+	
+	@Column(name="passw")
 	private String password;
+
+	@Column(name="tag")
 	private String tag;
+	
+	@Column(name="user_type")
 	private String type;
 	
 	public User() {

@@ -1,9 +1,22 @@
 package com.revature.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="song_table")
 public class Song {
 	
+	@Id
+	@Column(name="songid")
 	private int id;
+	
+	@Column(name="spotifyid")
 	private int spotifyId;
+	
+	@Column(name="sname")
 	private int name;
 	
 	public Song() {
