@@ -26,9 +26,9 @@
            </property>
            <!-- Mapped Classes-->
            <mapping class="com.revature.pojo.User"/>
-			<mapping class="com.revature.pojo.Song"/>
-			<mapping class="com.revature.pojo.Playlist"/>
-			<mapping class="com.revature.pojo.Battle"/>
+		   <mapping class="com.revature.pojo.Song"/>
+		   <mapping class="com.revature.pojo.Playlist"/>
+		   <mapping class="com.revature.pojo.Battle"/>
     </session-factory>
 </hibernate-configuration>
 

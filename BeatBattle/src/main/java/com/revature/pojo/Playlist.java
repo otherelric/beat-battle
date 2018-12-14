@@ -21,6 +21,10 @@ public class Playlist {
 	
 	@Column(name="pname")
 	private String name;
+
+//	@ManyToOne
+//	@JoinColumn(name="bname")
+//	private Battle battle;
 	
 	@Column(name="tags")
 	private String tag;

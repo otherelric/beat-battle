@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -22,8 +23,8 @@ public class Battle {
 	@JoinColumn(name="userid")
 	private User user;
 	
-	@OneToMany
-	@JoinColumn(name="playlistid")
+	@OneToMany(mappedBy="id", fetch=FetchType.EAGER)
+	//@JoinColumn(name="playlistid")
 	private Set<Playlist> playlist;
 
 	public Battle() {

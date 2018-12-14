@@ -8,9 +8,9 @@ public class Driver {
 
 	public static void main(String[] args) {
 		Session session = SessionUtil.getSession();
+		
 		User timboi = session.get(User.class, 1);
 		System.out.println(timboi);
-
 	}
 
 }
