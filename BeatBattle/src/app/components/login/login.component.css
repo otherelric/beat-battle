@@ -1,0 +1,31 @@
+
+form{
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 45%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    background-color: black;
+}
+form input{
+    text-align: center;
+    width: 60%;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+h3{
+    color: white;
+}
+
+#submit{
+    color: black;
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+#submit:hover{
+    background-color: magenta;
+}
