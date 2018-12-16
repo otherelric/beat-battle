@@ -1,0 +1,16 @@
+li{
+    background-color: black;
+    border: 1px solid rgb(255,255,255, .3);
+    margin-bottom: 10px;
+    width: 85%;
+    padding-bottom: 30px;
+}
+
+li div{
+    float: left;
+    width: 33%;
+}
+
+.play{
+    width: 10% !important;
+}

@@ -1,31 +1,32 @@
+h3{
+    margin-left: 10px;
+}
 
 form{
     margin-top: 15px;
     margin-left: 10px;
-    width: 45%;
+    width: 50%;
     padding-top: 5px;
     padding-bottom: 20px;
     border-radius: 20px;
-    background-color: black;
-}
-form input{
-    text-align: center;
-    width: 60%;
-    margin-bottom: 15px;
-    border-radius: 15px;
 }
 
-h3{
-    color: white;
+form input{
+    text-align: left;
+    padding: 10px;
+    padding-left: 20px !important;
 }
 
 #submit{
-    color: black;
-    margin-top: 10px;
-    border-radius: 15px;
-    background-color: white;
+    margin-top: 25px;
+    font-size: 16px;
+    text-align: center;
+    width: auto;
+    margin-left: 5px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
 }
 
 #submit:hover{
-    background-color: magenta;
+    background-color: black;
 }

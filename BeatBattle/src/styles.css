@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: black !important;
+    color: magenta !important;
+}
+
+#title{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+form input{
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 30px;
+    border: 3px solid black;
+    color: magenta;
+    width: 100%; /*override bootstrap width: auto on media 768 px*/
+}
+
+form button{
+    color: magenta;
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+form button:hover{
+    background-color: black;
+}
