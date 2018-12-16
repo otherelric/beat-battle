@@ -14,8 +14,8 @@ public class SessionUtil {
 	static {
 		StandardServiceRegistry servReg = 
 				new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml")
-				.applySetting("hibernate.connection.username", System.getenv("un"))
-				.applySetting("hibernate.connection.password", System.getenv("pw")).build();
+				.applySetting("hibernate.connection.username", System.getenv("un2"))
+				.applySetting("hibernate.connection.password", System.getenv("pw2")).build();
 		
 		Metadata md = 
 				new MetadataSources(servReg).getMetadataBuilder().build();

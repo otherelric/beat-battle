@@ -11,7 +11,7 @@ public class User {
 
 	@Id
 	@Column(name="userid")
-	private int id;
+	private Integer id;
 	
 	@Column(name="usern")
 	private String username;
@@ -26,10 +26,10 @@ public class User {
 	private String type;
 	
 	public User() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 	
-	public User(int id, String username, String password, String tag, String type) {
+	public User(Integer id, String password, String tag, String type, String username) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -38,11 +38,11 @@ public class User {
 		this.type = type;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

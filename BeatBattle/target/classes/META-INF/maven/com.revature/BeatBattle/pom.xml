@@ -16,6 +16,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
 	<dependencies>
 	<!-- SPRING -->
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
