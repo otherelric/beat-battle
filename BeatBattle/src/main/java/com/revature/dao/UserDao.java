@@ -12,7 +12,7 @@ public class UserDao {
 	public User getUser(String username) {
 		Session session = SessionUtil.getSession();
 		Criteria criteria = session.createCriteria(User.class);
-		User user = (User) criteria.add(Restrictions.eq("usern", username)).uniqueResult();
+		User user = (User) criteria.add(Restrictions.eq("username", username)).uniqueResult();
 		return user;
 	}
 }
