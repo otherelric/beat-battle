@@ -5,15 +5,12 @@ import { User } from '../types/user';
 @Injectable()
 export class UserServiceService {
 
-  readonly url = `http://localhost:8080/ServletExample/api/user/`;
+  readonly url = `http://localhost:8080/BeatBattle/user`;
 
   constructor(private http: HttpClient) { }
 
-  getUser(username: string) {
-
-    const userUrl = this.url + username;
-    return this.http.get<User>(userUrl);
-
+  getUser(user: User) {
+    return this.http.post<User>(this.url, user);
   }
 
 }

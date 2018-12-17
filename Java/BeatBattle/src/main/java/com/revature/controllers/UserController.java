@@ -50,7 +50,7 @@ public class UserController {
 			sess.setAttribute("user", authUser);
 			modelMap.addAttribute("user", authUser);
 		}
-		
+		System.out.println((User)sess.getAttribute("user"));
 		return (User)sess.getAttribute("user");
 	}
 	

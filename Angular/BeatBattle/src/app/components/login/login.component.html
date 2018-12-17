@@ -2,9 +2,10 @@
 
   <form method="post">
     <h3>Username:</h3> 
-    <input name="username" type="text" placeholder="name">
+    <input [(ngModel)]="username" name="username" type="text" placeholder="name"/>
     <h3>Password:</h3> 
-    <input name="password" type="password" placeholder="password">
-    <input id="submit" type="submit">
+    <input [(ngModel)]="password" name="password" type="text" placeholder="password"/>
+    <input id="submit" type="submit" (click)="findUser()">
+    <p>{{user.username + ' ' + user.id}}</p>
   </form>
 
