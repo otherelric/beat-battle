@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 id="title">
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div class="row">
+  <div class="column" id="myNav">
+    <nav class="navbar navbar-light bg-light justify-content-between">
+      <a routerLink="/explore" routerLinkActive="active" class="navbar-brand">
+        Explore
+      </a>
+      <a routerLink="/battle" routerLinkActive="active" class="navbar-brand">
+        Battle
+      </a>
+      <a routerLink="/playlist" routerLinkActive="active" class="navbar-brand">
+        Playlist
+      </a>
+      <a routerLink="/login" routerLinkActive="active" class="navbar-brand">
+        Login
+      </a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+  </div>
+  <div class="column" id="component">
+    <router-outlet></router-outlet>
+  </div>
+</div>

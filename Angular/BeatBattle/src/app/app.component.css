@@ -1,0 +1,71 @@
+nav{
+    margin-left: 30px;
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    width: 90%;
+    text-align: center !important;
+    display: table-caption;
+}
+
+nav a{
+    color: magenta;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 100px;
+}
+
+nav a:hover{
+    background-color: black;
+}
+
+form{
+    margin-top: 20px !important;
+    width: 100%;
+}
+
+form input{
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 30px;
+    border: 3px solid black;
+    color: magenta;
+    width: 100%; /*override bootstrap width: auto on media 768 px*/
+}
+
+form button{
+    color: magenta;
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+form button:hover{
+    background-color: black;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column{ 
+    float: left;
+    width: 45%;
+    height: 700px;
+}
+
+#myNav{
+    padding-left: 30px;
+}
+
+#component{
+    width: 50%;
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 15px;
+    padding-left: 40px; /*Pad component contents*/
+}
