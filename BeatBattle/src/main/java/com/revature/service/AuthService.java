@@ -10,12 +10,12 @@ public class AuthService {
 	
 	UserDao userDao = new UserDao();
 	
-	public User validateUser(String usern, String passw){
+	public User validateUser(User user){
 		User validUser = null;
-		User u = userDao.getUser(usern);
+		User u = userDao.getUser(user.getUsername());
 		
-		if (usern.equals(u.getUsername()) && passw.equals(u.getPassword())){
-			validUser = u;
+		if (user.getUsername().equals(u.getUsername()) && user.getPassword().equals(u.getPassword())){
+			validUser = user;
 		}
 		return validUser;
 	}
