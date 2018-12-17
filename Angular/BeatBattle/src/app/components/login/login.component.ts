@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../../services/user-service.service';
 import { User } from '../../types/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -13,10 +14,9 @@ export class LoginComponent implements OnInit {
   user: User;
 
   username: string;
-
   password: string;
 
-  constructor(private userService: UserServiceService) { }
+  constructor(private userService: UserServiceService, private router: Router) { }
 
   ngOnInit() {
     this.user = new User();
@@ -26,7 +26,12 @@ export class LoginComponent implements OnInit {
     this.user.username = this.username;
     this.user.password = this.password;
     this.userService.getUser(this.user).subscribe(
-      data => {this.user = data; console.log(data); });
+      data => {this.user = data; console.log(data); 
+      sessionStorage.setItem('currentUser', JSON.stringify(this.user));
+    });
+
+    // user logged in, run redirect
+    this.router.navigate(['./explore']);
   }
 
 }

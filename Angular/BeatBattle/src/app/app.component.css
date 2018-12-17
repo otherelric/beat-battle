@@ -69,3 +69,15 @@ form button:hover{
     border-radius: 15px;
     padding-left: 40px; /*Pad component contents*/
 }
+
+/*if screen gets too small*/
+@media only screen and (max-width: 600px) {
+    #component {
+        width: 80%;
+        margin-left: 60px;
+    }
+        
+    #myNav{
+        height: 50%;
+    }
+}

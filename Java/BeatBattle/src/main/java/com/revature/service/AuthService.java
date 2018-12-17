@@ -12,10 +12,12 @@ public class AuthService {
 	
 	public User validateUser(User user){
 		User validUser = null;
-		User u = userDao.getUser(user.getUsername());
+		User uDao = userDao.getUser(user.getUsername());
 		
-		if (user.getUsername().equals(u.getUsername()) && user.getPassword().equals(u.getPassword())){
-			validUser = user;
+		System.out.println("AUTH_SERVICE: " + uDao.toString());
+		
+		if (user.getUsername().equals(uDao.getUsername()) && user.getPassword().equals(uDao.getPassword())){
+			validUser = uDao;
 		}
 		return validUser;
 	}

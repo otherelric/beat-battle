@@ -24,17 +24,6 @@ public class UserController {
 	
 	@Autowired
 	AuthService authServ;
-	
-	/*@GetMapping
-	public List<User> getAllUsers(){
-		return authServ.getAllUsers();
-	}
-
-	@PostMapping(consumes = "application/json")
-	public void makeUser(@RequestBody User user){
-		System.out.println("User: " + user);
-		userService.createUser(user);
-	}*/
 
 	@RequestMapping(value ="/",produces = "application/json")
 	public void getURLValue(HttpServletRequest request){

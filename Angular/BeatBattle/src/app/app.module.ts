@@ -10,6 +10,7 @@ import { PlaylistComponent } from './components/playlist/playlist.component';
 import { ExploreComponent } from './components/explore/explore.component';
 import { UserServiceService } from './services/user-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     BattleComponent,
     PlaylistComponent,
-    ExploreComponent
+    ExploreComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

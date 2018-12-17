@@ -5,6 +5,8 @@ import { User } from '../types/user';
 @Injectable()
 export class UserServiceService {
 
+  user: User;
+
   readonly url = `http://localhost:8080/BeatBattle/user`;
 
   constructor(private http: HttpClient) { }
@@ -14,3 +16,4 @@ export class UserServiceService {
   }
 
 }
+ 

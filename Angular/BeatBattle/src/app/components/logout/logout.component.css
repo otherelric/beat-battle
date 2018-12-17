@@ -1,0 +1,12 @@
+div{
+    margin-left: 20px;
+}
+
+input{
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 30px;
+    border: 3px solid black;
+    color: magenta;
+    width: 200px; /*override bootstrap width: auto on media 768 px*/
+    height: 50px;
+}
