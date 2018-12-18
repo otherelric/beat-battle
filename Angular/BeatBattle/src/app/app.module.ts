@@ -11,6 +11,7 @@ import { ExploreComponent } from './components/explore/explore.component';
 import { UserServiceService } from './services/user-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './components/logout/logout.component';
+import { PlaylistBlockComponent } from './components/playlist-block/playlist-block.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     BattleComponent,
     PlaylistComponent,
     ExploreComponent,
-    LogoutComponent
+    LogoutComponent,
+    PlaylistBlockComponent
   ],
   imports: [
     BrowserModule,

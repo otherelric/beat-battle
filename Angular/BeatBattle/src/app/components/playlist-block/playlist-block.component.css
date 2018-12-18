@@ -19,16 +19,3 @@ li div{
 li div:hover{
     cursor: pointer;
 }
-
-.separator{
-    border: 2px solid rgb(255,255,255, 0.3);
-    width: 85%;
-    height: 1px;
-    margin-bottom: 20px;
-}
-
-#componentTitle{
-    height: 3%;
-    width: 85%;
-    text-align: center;
-}

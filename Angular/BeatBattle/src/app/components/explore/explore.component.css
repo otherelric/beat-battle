@@ -3,14 +3,32 @@ li{
     border: 1px solid rgb(255,255,255, .3);
     margin-bottom: 10px;
     width: 85%;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 li div{
     float: left;
-    width: 33%;
+    width: auto;
+    font-size: 20px;
 }
 
 .play{
-    width: 10% !important;
+    width: 12% !important;
+}
+
+li div:hover{
+    cursor: pointer;
+}
+
+.separator{
+    border: 2px solid rgb(255,255,255, 0.3);
+    width: 85%;
+    height: 1px;
+    margin-bottom: 20px;
+}
+
+#componentTitle{
+    height: 3%;
+    width: 85%;
+    text-align: center;
 }
