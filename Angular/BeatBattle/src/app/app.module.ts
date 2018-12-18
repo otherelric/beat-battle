@@ -12,6 +12,8 @@ import { UserServiceService } from './services/user-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './components/logout/logout.component';
 import { PlaylistBlockComponent } from './components/playlist-block/playlist-block.component';
+import { SpotifyService } from './services/spotify.service';
+import { BattleBlockComponent } from './components/battle-block/battle-block.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { PlaylistBlockComponent } from './components/playlist-block/playlist-blo
     PlaylistComponent,
     ExploreComponent,
     LogoutComponent,
-    PlaylistBlockComponent
+    PlaylistBlockComponent,
+    BattleBlockComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { PlaylistBlockComponent } from './components/playlist-block/playlist-blo
     HttpClientModule,
     FormsModule
   ],
-  providers: [ UserServiceService ],
+  providers: [ UserServiceService, SpotifyService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

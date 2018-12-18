@@ -10,6 +10,7 @@ export class PlaylistBlockComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

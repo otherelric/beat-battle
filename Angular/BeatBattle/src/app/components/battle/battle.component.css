@@ -1,25 +1,3 @@
-li{
-    background-color: black;
-    border: 1px solid rgb(255,255,255, .3);
-    margin-bottom: 10px;
-    width: 85%;
-    padding-bottom: 40px;
-}
-
-li div{
-    float: left;
-    width: auto;
-    font-size: 20px;
-}
-
-.play{
-    width: 12% !important;
-}
-
-li div:hover{
-    cursor: pointer;
-}
-
 .separator{
     border: 2px solid rgb(255,255,255, 0.3);
     width: 85%;
