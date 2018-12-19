@@ -13,7 +13,7 @@ public class UserDao {
 		Session session = SessionUtil.getSession();
 		Criteria criteria = session.createCriteria(User.class);
 		User user = (User) criteria.add(Restrictions.eq("username", username)).uniqueResult();
-		System.out.println("userDao" + user.toString());
+		//System.out.println("userDao" + user.toString());
 		return user;
 	}
 }

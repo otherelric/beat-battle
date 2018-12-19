@@ -24,12 +24,6 @@ public class UserController {
 	
 	@Autowired
 	AuthService authServ;
-
-	@RequestMapping(value ="/",produces = "application/json")
-	public void getURLValue(HttpServletRequest request){
-	    String test = request.getRequestURI();
-	    System.out.println("test: " + test);
-	}
 	
 	@PostMapping
 	public User getUser(@RequestBody User user, BindingResult bindingResult, HttpSession sess, ModelMap modelMap) {//@PathVariable String username, @PathVariable String password){
@@ -39,7 +33,7 @@ public class UserController {
 			sess.setAttribute("user", authUser);
 			modelMap.addAttribute("user", authUser);
 		}
-		System.out.println((User)sess.getAttribute("user"));
+		//System.out.println((User)sess.getAttribute("user"));
 		return (User)sess.getAttribute("user");
 	}
 	

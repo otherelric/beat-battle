@@ -14,7 +14,7 @@ public class AuthService {
 		User validUser = null;
 		User uDao = userDao.getUser(user.getUsername());
 		
-		System.out.println("AUTH_SERVICE: " + uDao.toString());
+		//System.out.println("AUTH_SERVICE: " + uDao.toString());
 		
 		if (user.getUsername().equals(uDao.getUsername()) && user.getPassword().equals(uDao.getPassword())){
 			validUser = uDao;
