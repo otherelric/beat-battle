@@ -14,6 +14,8 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { PlaylistBlockComponent } from './components/playlist-block/playlist-block.component';
 import { SpotifyService } from './services/spotify.service';
 import { BattleBlockComponent } from './components/battle-block/battle-block.component';
+import { CreatePlaylistComponent } from './components/create-playlist/create-playlist.component';
+import { CreateBattleComponent } from './components/create-battle/create-battle.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BattleBlockComponent } from './components/battle-block/battle-block.com
     ExploreComponent,
     LogoutComponent,
     PlaylistBlockComponent,
-    BattleBlockComponent
+    BattleBlockComponent,
+    CreatePlaylistComponent,
+    CreateBattleComponent
   ],
   imports: [
     BrowserModule,

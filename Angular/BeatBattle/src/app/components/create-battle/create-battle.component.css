@@ -1,0 +1,60 @@
+form{
+    width: 100%;
+}
+
+form input{
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 30px;
+    border: 3px solid black;
+    color: magenta;
+    width: 50%; /*override bootstrap width: auto on media 768 px*/
+}
+
+form button{
+    color: magenta;
+    background-color: rgb(255,255,255, 0.1);
+    border-radius: 30px;
+    text-align: center;
+    width: auto;
+    vertical-align: unset; /*turn off bootstrap v-align value*/
+    margin-bottom: 20px;
+}
+
+form button:hover{
+    background-color: black;
+}
+
+li{
+    background-color: black;
+    border: 1px solid rgb(255,255,255, .3);
+    margin-bottom: 10px;
+    width: 85%;
+    padding-bottom: 40px;
+}
+
+li div{
+    float: left;
+    width: auto;
+    font-size: 20px;
+}
+
+.play{
+    width: 12% !important;
+}
+
+li div:hover{
+    cursor: pointer;
+}
+
+.separator{
+    border: 2px solid rgb(255,255,255, 0.3);
+    width: 85%;
+    height: 1px;
+    margin-bottom: 20px;
+}
+
+#componentTitle{
+    height: 3%;
+    width: 85%;
+    text-align: center;
+}
