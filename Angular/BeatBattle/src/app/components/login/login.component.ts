@@ -4,6 +4,7 @@ import { User } from '../../types/user';
 import { Router } from '@angular/router';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
     this.user.username = this.username;
     this.user.password = this.password;
     this.userService.getUser(this.user).subscribe(
-      data => {this.user = data; console.log(data); 
+      data => {this.user = data; console.log(data);
       sessionStorage.setItem('currentUser', JSON.stringify(this.user));
     });
 
