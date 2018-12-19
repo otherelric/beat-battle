@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from 'src/app/services/spotify.service';
 
-
-
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'explore',
@@ -13,9 +11,7 @@ export class ExploreComponent implements OnInit {
 
   searchStr: string;
 
-  constructor(private spotifyService: SpotifyService) {
-
-  }
+  constructor(private spotifyService: SpotifyService) { }
 
     ngOnInit() {
 

@@ -14,6 +14,7 @@ export class SpotifyService {
 
     const SpotifyWebApi = require('spotify-web-api-node');
 
+    var obj;
     // credentials are optional
     const spotifyApi = new SpotifyWebApi({
       clientId: 'bbc1f31746354b619c6e0d2839b5099b',
@@ -22,10 +23,12 @@ export class SpotifyService {
     });
 
     // tslint:disable-next-line:max-line-length
-    spotifyApi.setAccessToken('BQDHWuPqhUpw4IHAMfkgb8DBxDcJnsSe6o9TVC7c4-zu13xIlyKwXXCFjmSyzHNtNWO_WOt9QHIi1B_SIR6L0cxXLRqQm-cnD8ugVIn25wvvDBJQh7lRFa0MovEcwpHKH21f9bGrJKAzM4GX1M6gBSR-qOuXaA');
+    spotifyApi.setAccessToken('BQDVP4yU6BZd2FNWXXG3YMod4eS-CU5AcQdxMSTqS81rX6L2wH071oXo0dRV9Mav7mufy1eOvu8G48ebeZjnmL-llaYxhNeGjMJhTCXlUNh3wKmRKcRJxP-4uAfOp1o2-86IQFcEMp2EKm8PfoGMvf5SNOPO9gs');
     spotifyApi.searchTracks(str)
+
     .then(function(data) {
-      console.log('Search by:' + str, data.body);
+      console.log('Search by: ' + str, data.body);
+      console.log('GET FIRST ARTIST: ' + data.body.tracks.items[0].artists[0].name);
     }, function(err) {
       console.error(err);
     });
