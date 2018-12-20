@@ -1,5 +1,7 @@
 package com.revature.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.revature.dao.BattleDao;
@@ -39,7 +41,7 @@ public class AuthService {
 		}
 	}
 	
-	public Battle doesBattleExist(int i) {
+	public List<Battle> doesBattleExist(int i) {
 		return battleDao.getBattle(i);
 	}
 	

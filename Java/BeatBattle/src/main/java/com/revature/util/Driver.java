@@ -32,7 +32,7 @@ public class Driver {
 		
 		AuthService authServ = new AuthService();
 		
-		Battle b = authServ.doesBattleExist(1);
+		List<Battle> b = authServ.doesBattleExist(1);
 		System.out.println(b);
 		
 	}

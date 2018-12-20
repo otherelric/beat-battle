@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from 'src/app/services/spotify.service';
+import { Song } from '../../types/song';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -10,12 +11,11 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class ExploreComponent implements OnInit {
 
   searchStr: string;
-
-  res: any; // anything please god help me this is dumb
+  song: Song;
 
   artist: string;
   album: string;
-  song: string;
+  name: string; // song name
 
   constructor(private spotifyService: SpotifyService) { }
 
@@ -27,9 +27,10 @@ export class ExploreComponent implements OnInit {
     }
 
     searchMusic() {
-      this.spotifyService.searchMusic(this.searchStr)
-        .subscribe(res => { this.res = res; });
-        console.log("Hello?!" + this.res);
+      this.song = new Song();
+      this.song = this.spotifyService.searchMusic(this.searchStr);
+      console.log("Song: " + this.song.name);
+      console.log(this.song);
     }
 
 }

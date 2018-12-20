@@ -34,5 +34,4 @@ export class LoginComponent implements OnInit {
     // user logged in, run redirect
     this.router.navigate(['./explore']);
   }
-
 }
