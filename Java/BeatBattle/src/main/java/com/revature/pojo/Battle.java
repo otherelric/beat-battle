@@ -16,24 +16,28 @@ import javax.persistence.Table;
 public class Battle {
 	
 	@Id
-	@Column(name="battleid")
+	@Column(name="id")
 	private int id;
+	
+	@Column(name="battleid")
+	private int battleid;
 	
 	@OneToOne
 	@JoinColumn(name="userid")
 	private User user;
 	
-	@OneToMany(mappedBy="id", fetch=FetchType.EAGER)
-	//@JoinColumn(name="playlistid")
-	private Set<Playlist> playlist;
+	@OneToOne
+	@JoinColumn(name="playlistid")
+	private Playlist playlist;
 
 	public Battle() {
 
 	}
 
-	public Battle(int id, User user, Set<Playlist> playlist) {
+	public Battle(int id, int battleid, User user, Playlist playlist) {
 		super();
 		this.id = id;
+		this.battleid = battleid;
 		this.user = user;
 		this.playlist = playlist;
 	}
@@ -46,25 +50,33 @@ public class Battle {
 		this.id = id;
 	}
 
-	public User getuser() {
+	public int getBattleid() {
+		return battleid;
+	}
+
+	public void setBattleid(int battleid) {
+		this.battleid = battleid;
+	}
+
+	public User getUser() {
 		return user;
 	}
 
-	public void setuser(User user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 
-	public Set<Playlist> getPlaylist() {
+	public Playlist getPlaylist() {
 		return playlist;
 	}
 
-	public void setPlaylist(Set<Playlist> playlist) {
+	public void setPlaylist(Playlist playlist) {
 		this.playlist = playlist;
 	}
 
 	@Override
 	public String toString() {
-		return "Battle [id=" + id + ", user=" + user + ", playlist=" + playlist + "]";
+		return "Battle [id=" + id + ", battleid=" + battleid + ", user=" + user + ", playlist=" + playlist + "]";
 	}
 
 }

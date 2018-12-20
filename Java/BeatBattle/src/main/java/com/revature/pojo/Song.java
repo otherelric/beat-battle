@@ -14,7 +14,7 @@ public class Song {
 	private int id;
 	
 	@Column(name="spotifyid")
-	private int spotifyId;
+	private String spotifyId;
 	
 	@Column(name="sname")
 	private int name;
@@ -23,7 +23,7 @@ public class Song {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Song(int id, int spotifyId, int name) {
+	public Song(int id, String spotifyId, int name) {
 		super();
 		this.id = id;
 		this.spotifyId = spotifyId;
@@ -38,11 +38,11 @@ public class Song {
 		this.id = id;
 	}
 
-	public int getSpotifyId() {
+	public String getSpotifyId() {
 		return spotifyId;
 	}
 
-	public void setSpotifyId(int spotifyId) {
+	public void setSpotifyId(String spotifyId) {
 		this.spotifyId = spotifyId;
 	}
 
