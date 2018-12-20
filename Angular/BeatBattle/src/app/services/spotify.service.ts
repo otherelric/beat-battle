@@ -23,7 +23,7 @@ export class SpotifyService {
     });
 
     // tslint:disable-next-line:max-line-length
-    spotifyApi.setAccessToken('BQDVP4yU6BZd2FNWXXG3YMod4eS-CU5AcQdxMSTqS81rX6L2wH071oXo0dRV9Mav7mufy1eOvu8G48ebeZjnmL-llaYxhNeGjMJhTCXlUNh3wKmRKcRJxP-4uAfOp1o2-86IQFcEMp2EKm8PfoGMvf5SNOPO9gs');
+    spotifyApi.setAccessToken('BQCVpAg7sSSMeDxSmi1CRBeI78Im3gsbKIEre18oCMpDBDEFMzcPCSWeKjUFLL-S1OB-kR9-W4xa8UjxnHYYdccuj70yayiXiW5QirtMVjrjx_OXUGKXsDVPWhChUYqyAfXTbAmy7t7LfOE');
     spotifyApi.searchTracks(str)
 
     .then(function(data) {
