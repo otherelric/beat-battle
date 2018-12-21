@@ -10,13 +10,21 @@ import { Battle } from 'src/app/types/battle';
 })
 export class BattleComponent implements OnInit {
 
-  battle: Battle;
+  battleArray: Battle[];
+  battle = new Battle();
+  battleTwo = new Battle();
 
   constructor(private battleService: BattleService) { }
 
   ngOnInit() {
-    this.battleService.getBattle(this.battle).subscribe(
-      data => {this.battle = data; console.log(data);
+    this.battle.id = 1;
+    this.battleTwo.id = 2;
+    this.battleArray = [
+      this.battle,
+      this.battleTwo
+    ];
+    this.battleService.getBattle(this.battleArray).subscribe(
+      data => {this.battleArray = data; console.log(data);
     });
   }
 

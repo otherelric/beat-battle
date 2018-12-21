@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('currentUser', JSON.stringify(this.user));
     });
 
-    // user logged in, run redirect
+    // user logged in, run redirect, reload session
     this.router.navigate(['./explore']);
   }
 }

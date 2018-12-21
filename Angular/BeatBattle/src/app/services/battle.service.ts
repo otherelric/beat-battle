@@ -9,13 +9,15 @@ export class BattleService {
 
   battle: Battle;
 
+  battleArray: Battle[];
+
   readonly url = `http://localhost:8080/BeatBattle/battle`;
 
   constructor(private http: HttpClient) { }
 
-  getBattle(battle: Battle) {
+  getBattle(bArray: Battle[]) {
     // may have to figure out what to do with JSON
-    return this.http.get<Battle>(this.url);
+    return this.http.post<Battle[]>(this.url, bArray);
   }
 
   createBattle(battle: Battle) {

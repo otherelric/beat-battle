@@ -29,8 +29,8 @@ export class ExploreComponent implements OnInit {
     searchMusic() {
       this.song = new Song();
       this.song = this.spotifyService.searchMusic(this.searchStr);
-      console.log("Song: " + this.song.name);
-      console.log(this.song);
+      // console.log('Song: ' + this.song.name);
+      // console.log('now this runs');
     }
 
 }

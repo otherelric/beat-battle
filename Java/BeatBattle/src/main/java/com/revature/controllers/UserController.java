@@ -1,7 +1,5 @@
 package com.revature.controllers;
 
-import javax.servlet.http.HttpServletRequest;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.pojo.User;
-import com.revature.service.AuthService;
-
+import com.revature.pojo.*;
+import com.revature.service.*;
 
 //combines the @Controller and @RequestBody annotations
 @RestController("/user")

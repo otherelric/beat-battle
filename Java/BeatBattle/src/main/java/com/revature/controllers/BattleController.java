@@ -1,5 +1,7 @@
 package com.revature.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,25 +11,38 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.pojo.Battle;
 import com.revature.pojo.User;
 import com.revature.service.AuthService;
 
-@RestController("/battle")
+@RestController
+@RequestMapping("/battle")
 @CrossOrigin(origins= "*")
 public class BattleController {
 
 	@Autowired
 	AuthService authServ;
 	
-	@GetMapping
-	public Battle getBattle(@RequestBody Battle battle, BindingResult bindingResult, HttpSession sess, ModelMap modelMap) {
+//	@GetMapping
+//	public List<Battle> GetAllBattles(){
+//		
+//		
+//	}
+	
+	public List<Battle> getBattle(@RequestBody Battle battle, BindingResult bindingResult, HttpSession sess, ModelMap modelMap) {
 		return authServ.doesBattleExist(battle.getId());
 	}
 	
-	@PostMapping
+	
+//	@GetMapping("/{id}")
+//	public Battle getBattleById(@PathVariable int id) {
+//		
+//	}
+	
+	/*@PostMapping("/doOtherStuff") //just testing... not fr
 	public void createBattle(@RequestBody Battle battle, BindingResult bindingResult, HttpSession sess, ModelMap modelMap) {
 		User curUser = (User)sess.getAttribute("user");
 		if(curUser != null && "bo".equals(curUser.getType())) {
@@ -38,5 +53,5 @@ public class BattleController {
 			}
 		}
 	}
-	
+	*/
 }

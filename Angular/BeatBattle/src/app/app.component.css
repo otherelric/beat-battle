@@ -8,11 +8,20 @@ nav{
     display: table-caption;
 }
 
+h3{
+    font-size: 16px;
+    border: 1px solid magenta;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+
 nav a{
     color: magenta;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 20px;
+    margin-top: 20px;
     border-radius: 30px;
     font-size: 15px;
     width: 100px;

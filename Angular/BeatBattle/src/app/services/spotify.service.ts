@@ -9,14 +9,11 @@ export class SpotifyService {
 
   private searchUrl: string;
 
-  private song: Song;
+  song: Song;
 
   constructor(private http: HttpClient) { }
 
   searchMusic(str: string) {
-
-    this.song = new Song();
-
     const SpotifyWebApi = require('spotify-web-api-node');
 
     // credentials are optional
@@ -27,13 +24,15 @@ export class SpotifyService {
     });
 
     // tslint:disable-next-line:max-line-length
-    spotifyApi.setAccessToken('BQDuy5VfWywXqUMc29XoPn8CH6AUqWpFUv7mvQg8bk5_eXGLk7OVBpxaIPVSv_sTrq0Np1-9d3QTzcakStVP8nDCcvlsrLyZvEfOecXlODwyQZEJ1SGGDWvdAGs0_-8JQIjuONweLaucIbs');
+    spotifyApi.setAccessToken('BQAhND-N_rXTuMaDJo-KG0QLZvNcWI8rRp224fhyBzeRUNzDo6yzTqhdFdH5xkEULdVKr_pwJ9ocW54AKM0N_USjhFv0QX4js8dfpumuAfxxl2U51ouimNhRF6qS4Nq4ZSDG8Kme8IhiaygbMYjyCuIdAnQDPw');
     spotifyApi.searchTracks(str)
     .then(function(data) {
+      // this.song = new Song();
+      // this.song.id = data.body.tracks.items[0].id;
+      // console.log('tell me info: ' + this.song.id);
       console.log('Search by: ' + str, data.body);
       console.log('GET FIRST ARTIST: ' + data.body.tracks.items[0].artists[0].name);
-      this.song.id = data.body.tracks.items[0].id;
-      this.song.name = data.body.tracks.items[0].name;
+      // this.song.name = data.body.tracks.items[0].name;
     }, function(err) {
       console.error(err);
     });
